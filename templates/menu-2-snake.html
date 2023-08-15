@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Snake Game</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="wallpaper-snake">
+        <div class="menu-fase-2-snake">
+            <div class="menus-snake"><img src="/icon/menu-snake-game.png"></div>
+            <div class="fases-snake">
+                <a href="fase-1-snake.html" class="fase-snake"><img src="/icon/fase-1.png"></a>
+                <a href="fase-2-snake.html" class="fase-snake"><img src="/icon/fase-2.png"></a>
+                <a href="#" class="fase-snake"><img src="/icon/bloqueio.png"></a>
+                <a href="inicio-snake.html" class="voltar-snake">Voltar</a>
+                <a href="#" class="creditos-snake" onclick="abrirModal()">Créditos</a>
+                <a href="#" class="sair-snake" onclick="sairModal()">Sair</a>
+            </div>
+        </div>
+        
+        <!-- Sessão Janela de Créditos -->
+        <div class="janela-snake" id="janela-snake">
+            <div class="modal-snake">
+                <button class="fechar-snake" id="fechar-snake">X</button>
+                <h1 class="titulo-snake">Créditos</h1>
+                <p class="texto-snake">UNIVERSIDADE FEDERAL RURAL DE PERNAMBUCO</p>
+                <p class="texto-snake">UNIDADE ACADÊMICA DE SERRA TALHADA</p>
+                <p class="texto-snake">BACHARELADO EM SISTEMAS DE INFORMAÇÃO</p>
+                <p class="texto-snake">DISCIPLINA: INTERFACES HOMEM-MÁQUINA</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p class="autor-snake">AUTOR: JOÃO PAULO SANTIAGO CAVALCANTE</p>
+                <p class="docente-snake">DOCENTE: RICHARLYSON ALVES D’EMERY</p>
+            </div>
+        </div>
+
+        <!-- Sessão Janela de Sair do Sistema -->
+        <div class="system-snake" id="system-snake">
+            <div class="modal-exit-snake">
+                <p class="fonte-snake">Tem certeza de que deseja sair do sistema?</p>
+                <div class="opcao-snake">
+                    <a href="#" class="nao-snake" id="nao-snake">Não</a>
+                    <a href="saindo-snake.html" class="sim-snake" id="sim-snake">Sim</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/js/janela-snake.js"></script>
+</body>
+</html>

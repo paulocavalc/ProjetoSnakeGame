@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Snake Game</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="wallpaper-snake">
+        <div class="fase-2-snake">
+            <a href="#" onclick="laranjoModal()"></a>
+            <a href="#" onclick="gameOverModal()"></a>
+            <a href="menu-2-snake.html" class="back-snake"><img src="/icon/voltar.png"></a>
+            
+            <div class="grid-snake">
+                <canvas class="laranjo-snake"></canvas>
+
+                <div class="comando-1-snake">
+                    <div class="timer" id="timer">Time<span id="countdown-display">600</span></div>
+                    <div class="bloco-snake">
+                        <div class="f-snake"><img src="/icon/fase-10.png" draggable="true" id="arrow-right" ondragstart="drag(event)"></div>
+                        <div class="f-snake"><img src="/icon/fase-11.png" draggable="true" id="arrow-down" ondragstart="drag(event)"></div>
+                        <div class="f-snake"><img src="/icon/fase-12.png" draggable="true" id="arrow-left" ondragstart="drag(event)"></div>
+                        <div class="f-snake"><img src="/icon/fase-13.png" draggable="true" id="arrow-up" ondragstart="drag(event)"></div>
+                    </div>
+                    <button class="excluir-snake" id="excluir-snake" onclick="deleteSnake()"><i class="fa-regular fa-trash-can"></i></button> 
+                </div>
+
+            </div>
+
+            <div class="comando-2-snake">
+                <div class="main-snake">
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div class="g-snake" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                </div>
+            </div> 
+            
+        </div>
+
+        <!-- Sessão Janela de Laranjo -->
+        <div class="janela-snake" id="janela-snake">
+            <div class="modal-green-snake">
+                <div class="p-snake"><img src="/icon/parabens.png"></div>
+                <div class="s-snake"><img src="/icon/score-6.png"></div>
+                <div class="opcao-snake">
+                    <a href="fase-2-snake.html" class="fechar-green-snake">Jogar Novamente</a>
+                    <a href="menu-3-snake.html" class="parabens-snake">Próxima</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sessão Game Over -->
+        <div class="over-snake" id="over-snake">
+            <div class="modal-game-over">
+                <div class="texto-over"><img src="/icon/game-over.png"></div>
+                <div class="opcao-snake">
+                    <a href="fase-2-snake.html" class="tentar-novamente-snake">Tentar Novamente</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="/js/fase-2-snake.js"></script>
+</body>
+</html>
