@@ -23,7 +23,7 @@
 	var snakeRight = false;
 	var snakeDown = false;
 
-	var countdown = 300;
+	var countdown = 400;
 	var countdownInterval;
 
 	var apple = { 
@@ -101,7 +101,7 @@
 			if(e.target.id == 'over-snake') {
 				over.classList.remove('game-snake');
 				resetGame();
-				countdown = 300;
+				countdown = 400;
 				countdownInterval = setInterval(updateCountdown, 1000);
 			}
 		})

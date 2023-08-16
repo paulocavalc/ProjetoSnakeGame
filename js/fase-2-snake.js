@@ -11,7 +11,7 @@
 	var WIDTH = green.width;
     var HEIGHT = green.height;
 
-    var quantidadeMaca = 6;
+    var quantidadeMaca = 5;
     var maçasComidas = 0;
 	var initialSnakeLength = 1;
 

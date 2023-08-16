@@ -11,7 +11,7 @@
 	var WIDTH = green.width;
     var HEIGHT = green.height;
 
-    var quantidadeMaca = 9;
+    var quantidadeMaca = 7;
     var maçasComidas = 0;
 	var initialSnakeLength = 1;
 
@@ -23,7 +23,7 @@
 	var snakeRight = false;
 	var snakeDown = false;
 
-	var countdown = 900;
+	var countdown = 800;
 	var countdownInterval;
 
 	var apple = { 
@@ -101,7 +101,7 @@
 			if(e.target.id == 'over-snake') {
 				over.classList.remove('game-snake');
 				resetGame();
-				countdown = 900;
+				countdown = 800;
 				countdownInterval = setInterval(updateCountdown, 1000);
 			}
 		})
